@@ -22,8 +22,8 @@ def scrape():
 
     post_paragraph = soup.find_all('div', class_="article_teaser_body")[0].text
 
-    # Exit Browser
-    browser.quit()
+    # # Exit Browser
+    # browser.quit()
 
     # ----------------------------------------------------------------------------------------------------------------------------------- #
 
@@ -40,8 +40,8 @@ def scrape():
 
     image_full_link = image_url + image["href"]
 
-    # Exit Browser
-    browser.quit()
+    # # Exit Browser
+    # browser.quit()
 
     # ----------------------------------------------------------------------------------------------------------------------------------- #
 
@@ -60,9 +60,6 @@ def scrape():
     # mars_facts_info = mars_facts_info.reset_index(drop=True)
 
     mars_facts_comparison.columns = ['Description', 'Mars', 'Earth']
-
-    # Exit Browser
-    browser.quit()
 
     # ----------------------------------------------------------------------------------------------------------------------------------- #
 
@@ -105,13 +102,13 @@ def scrape():
         
     mars_hemisphere_details
 
-    # Exit Browser
-    browser.quit()
+    # # Exit Browser
+    # browser.quit()
 
     # ----------------------------------------------------------------------------------------------------------------------------------- #
 
     # Storing scraped data #
-    missions_to_mars = {
+    mars_data = {
         "title": post_title,
         "description": post_paragraph,
         "image_link": image_full_link,
@@ -121,4 +118,4 @@ def scrape():
     }
 
     # Return results
-    return missions_to_mars
+    return mars_data

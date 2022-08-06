@@ -23,14 +23,14 @@
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
     </div>
 	<h2>Latest Mars News</h2>
-    <font size="4"><strong>{{ mission_to_mars.title }}</strong></font>
-	<p>{{ mission_to_mars.preview }}</p>
+    <font size="4"><strong>{{ Mission_Mars.title }}</strong></font>
+	<p>{{ Mission_Mars.preview }}</p>
 
 	<div class="container-xxl">
 		<div class = "row">
 			<div class="col-lg-6">
 				<h2>Featured Mars Image</h2>
-				<img src="{{ mission_to_mars.img_url }}" alt="Featured Mars">
+				<img src="{{ Mission_Mars.img_url }}" alt="Featured Mars">
 			</div>
 			<div class="col-lg-2">
 			</div>
@@ -46,7 +46,7 @@
 						<tr>
 					</thead>
 					<tbody>
-						{% for i in mission_to_mars.mars_table%}
+						{% for i in Mission_Mars.mars_table%}
 						<tr>
 							<td><strong>{{ i['Description'] }}</strong></td>
 							<td style="text-align:right">{{ i['Mars'] }}</td>
@@ -64,7 +64,7 @@
 		<h2 style="text-align:center"><strong>Mars Hemispheres</strong></h2>
 		<hr class="mt-2 mb-3"/>
 		<div class="card-deck">
-			{% for i in mission_to_mars.hemisphere %}
+			{% for i in Mission_Mars.hemisphere %}
 			<div class="card">
 				<img class="card-img-top" src="{{ i['url'] }}" alt="{{ i['title']}}" >
 				<div class="card-body">
